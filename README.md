@@ -16,12 +16,12 @@
 ```
 go get github.com/spf13/pflag
 ```
-
+## 导入所需包
 安装成功后，我们就可以使用下面的代码导入pflag包：
 
 ```go
 import (
-	flag "github.com/spf13/pflag"
+	flag "github.com/wyp33/pflag"
 )
 ```
 
@@ -49,7 +49,7 @@ func init() {
 
 ```go
 import (
-	flag "github.com/spf13/pflag"
+	flag "github.com/wyp33/pflag"
 )
 
 // 将flag绑定到变量上
@@ -174,7 +174,7 @@ for scanner.Scan() {
 }
 ```
 
-另一种就是每一页的行数固定，因此我们需要使用一个变量计算当前的行数：
+另一种是每页的行数固定，因此我们需要使用一个变量计算当前的行数：
 
 ```go
 for{
@@ -186,7 +186,7 @@ for{
     }else if(err != nil){
         panic(err)
     }
-    // curPage表示现在的页数
+    // curPage为当前页数
     curPage := counter/(*page_len)
     if(curPage >= (*start_page)-1 && curPage < (*end_page)) {
         outputContent += str
