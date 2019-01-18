@@ -2,7 +2,7 @@ package main
 
 import (
 	"io"
-	flag "github.com/spf13/pflag"
+	flag "github.com/wyp33/pflag"
 	"fmt"
 	"bufio"
 	"os"
@@ -137,7 +137,7 @@ func getPrint(){
 				}else if(err != nil){
 					panic(err)
 				}
-				// curPage表示现在的页数
+				// curPage为当前页数
 				curPage := counter/(*page_len)
 				if(curPage >= (*start_page)-1 && curPage < (*end_page)) {
 					outputContent += str
